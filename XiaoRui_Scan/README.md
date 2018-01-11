@@ -31,3 +31,5 @@ linux、python3
 结果保存excel：
 
 ![3.jpg](./img/3.jpg)
+
+注：masscan为64位，32位系统上替换masscan为32位即可。运行前需要用命令`chmod +x masscan`赋予执行权限。
