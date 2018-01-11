@@ -106,9 +106,6 @@ class Scan():
             try:
                 # nmap扫描参数 --host-timeout 18:超时时间 -T5:快速 -Pn:不ping -sV:端口对应服务版本 -O:系统指纹识别
                 nminfo = nmscan.scan(hosts=ip, ports=port, arguments='--host-timeout 20 -T5 -Pn -sV -O')
-            except TimeoutError:
-                pass
-            try:
                 nmserver = nminfo['scan'][ip]['osmatch'][0]['name']
                 nmname = nminfo['scan'][ip]['tcp'][int(port)]['name']
                 nmproduct = nminfo['scan'][ip]['tcp'][int(port)]['product']
